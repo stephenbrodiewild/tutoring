@@ -10,5 +10,3 @@ Run
 	```bash
 	python loops_tests.py
 	```
-
-
