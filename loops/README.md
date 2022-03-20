@@ -1,9 +1,11 @@
-# A whole bunch of loopy exercises.
+# A whole bunch of loopy exercises
 
-A bunch of theory stuff (skip if bored and come back before exams):
+Here's some theory + background.
 
-- when you write a program, you'll want some code to be executed multiple times
-- different ways of doing **iteration** or **repetition**:
+- when you write a program, you'll want some code to be executed multiple times, and you might not know in advance how many times it should be repeated
+- we call this **iteration** or **repetition**
+- for a programming language to be useful, it needs to support iteration in some way
+- [There are different ways to do this](https://en.wikipedia.org/wiki/Church%E2%80%93Turing_thesis):
 
     1. jumps (and GOTO) in assembly languages (and C)
         - all iteration, at the end of the day, is just doing this (i.e. when your code is compiled/interpreted)
@@ -42,14 +44,14 @@ A bunch of theory stuff (skip if bored and come back before exams):
                     return gcd(y, x % y)
             ```
 - in python, you'll generally be writing for-loops, sometimes while loops, and very ocassionally recursive functions
-    - recursive functions aren't always efficient in Python because it lacks 'tail-call optimisation'
-    - pretty easy to get 'stack-overflow errors'
+    - recursive functions aren't always efficient in Python because it lacks [tail-call optimisation](https://en.wikipedia.org/wiki/Tail_call)
+    - pretty easy to get [stack-overflow errors](https://en.wikipedia.org/wiki/Stack_overflow)
     - e.g. 
-            ```python
-            def crash_python():
-                print("I'm going to crash lol")
-                crash_python()
-            ```
+        ```python
+        def crash_python():
+            print("I'm going to crash lol")
+            crash_python()
+        ```
 - while-loops and recursive functions are equivalent (apart from efficiency considerations, and the whole tail-call thing)
     - e.g.
 
@@ -65,7 +67,7 @@ A bunch of theory stuff (skip if bored and come back before exams):
                 print("Wrong number!)
                 guessing_game(n)
         ```
-- every for-loop can be rewritten to be recursive or use a while-loop, but not vice-versa
+- [every for-loop can be rewritten to be recursive or use a while-loop](https://en.wikipedia.org/wiki/Primitive_recursive_function), but not vice-versa
     - e.g.
 
         ```python
@@ -83,7 +85,7 @@ A bunch of theory stuff (skip if bored and come back before exams):
 
 - it takes a bit of practise to know when while loops, for loops, recursion, or GOTO is better
 - rules of thumb:
-    - while loops are for when you don't know how many times the code should run, but you know when it should stop
+    - while loops are for when you don't know how many times the code should run, but you know when it should stop, or it shouldn't stop at all
     - for loops are useful when you know how many times the code should be run
     - recursion comes in handy if operating on a recursive data-structure
     - GOTO is bad; avoid GOTO. [^2]
