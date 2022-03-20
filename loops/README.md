@@ -6,7 +6,7 @@ Excercises are in loops.py, some example code that's intended to be read + execu
 common_loop_patterns.py, and loops_tests.py contains the
 tests for loops.py.
 
-Run
-	```bash
-	python loops_tests.py
-	```
+Run tests:
+```bash
+python loops_tests.py
+```
