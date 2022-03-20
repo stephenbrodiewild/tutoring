@@ -15,7 +15,7 @@ A bunch of theory stuff (skip if bored and come back before exams):
     2. while loops
         - used for potentially **unbounded repetition**
         - e.g.
-            ```
+            ```python
             # keep asking for number until user enters 10
             while(int(input("Guess a number: ")) != 10):
                 print("Wrong number!")
@@ -23,7 +23,7 @@ A bunch of theory stuff (skip if bored and come back before exams):
     3. for loops
         - used for **bounded repetition**, or iterating over a **collection**
         - e.g.
-            ```
+            ```python
             # prints each fruit on a new line
             for fruit in ["apple", "banana", "mango"]:
                 print(fruit)
@@ -33,7 +33,7 @@ A bunch of theory stuff (skip if bored and come back before exams):
             naturally divided into similar and smaller sub-problems, and so on and so forth until you hit
             a 'base' case
         - e.g.
-            ```
+            ```python
             # calculate the greatest common divisor of two numbers
             def gcd(x,y):
                 if(y == 0):
@@ -45,7 +45,7 @@ A bunch of theory stuff (skip if bored and come back before exams):
     - recursive functions aren't always efficient in Python because it lacks 'tail-call optimisation'
     - pretty easy to get 'stack-overflow errors'
     - e.g. 
-            ```
+            ```python
             def crash_python():
                 print("I'm going to crash lol")
                 crash_python()
@@ -53,13 +53,13 @@ A bunch of theory stuff (skip if bored and come back before exams):
 - while-loops and recursive functions are equivalent (apart from efficiency considerations, and the whole tail-call thing)
     - e.g.
 
-        ```
+        ```python
         def guessing_game(n):
             while(int(input("Guess a number: ")) != n):
                     print("Wrong number!")
         ```
         can be rewritten to 
-        ```
+        ```python
         def guessing_game(n):
             if(int(input("Guess a number: ")) != n):
                 print("Wrong number!)
@@ -68,14 +68,14 @@ A bunch of theory stuff (skip if bored and come back before exams):
 - every for-loop can be rewritten to be recursive or use a while-loop, but not vice-versa
     - e.g.
 
-        ```
+        ```python
         x = 0
         while(x >= 0):
             print(f"Looped {x} times...")
             x += 1
         ```
         can't be rewritten into a for-loop. If you could, it'd look something like:
-        ```
+        ```python
         for x in infinite_list:
             print(f"Looped {x} times...") 
         ```
